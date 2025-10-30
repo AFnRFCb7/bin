@@ -11,7 +11,7 @@
                         let
                             implementation =
                                 {
-                                    inputs ,
+                                    inputs ? [ ] ,
                                     name ,
                                     text
                                 } :
@@ -52,7 +52,7 @@
                                     check =
                                         {
                                             expected ,
-                                            inputs ,
+                                            inputs ? [ ] ,
                                             mkDerivation ,
                                             name ,
                                             text
