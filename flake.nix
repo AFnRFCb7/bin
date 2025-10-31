@@ -52,6 +52,7 @@
                                     check =
                                         {
                                             expected ,
+                                            failure ,
                                             inputs ? [ ] ,
                                             mkDerivation ,
                                             name ,
