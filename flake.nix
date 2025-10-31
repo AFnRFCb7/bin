@@ -35,7 +35,7 @@
                                                                                         ''
                                                                                             ${ builtins.concatStringsSep "" ( builtins.map ( input : builtins.concatStringsSep "" [ "V" ( builtins.hashString "sha512" input ) "=" input ] ) inputs ) }
                                                                                             ${ builtins.concatStringsSep "" ( builtins.map ( input : "PATH=$PATH:$V${ builtins.hashString "sha512" input }" inputs ) ) }
-                                                                                            ${ pkgs.writeShellApplication { name = name ; text = text ; } }/bin/${ name }
+                                                                                            ${ writeShellApplication { name = name ; text = text ; } }/bin/${ name }
                                                                                         '' ;
                                                                                 } ;
                                                                         in
