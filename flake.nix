@@ -26,7 +26,7 @@
                                                                 runtimeInputs = [ coreutils ] ;
                                                                 text =
                                                                     let
-                                                                        application_ =
+                                                                        application =
                                                                             writeShellApplication
                                                                                 {
                                                                                     name = name ;
