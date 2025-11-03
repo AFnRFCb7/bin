@@ -17,7 +17,7 @@
                                 } :
                                     {
                                         init =
-                                            { resources , self } :
+                                            { resources , self , stores } :
                                                 let
                                                     application =
                                                         writeShellApplication
