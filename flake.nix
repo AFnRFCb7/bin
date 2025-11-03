@@ -58,6 +58,7 @@
                                             name ,
                                             resources ? null ,
                                             self ? null ,
+                                            stores ? null ,
                                             text
                                         } :
                                             mkDerivation
@@ -73,7 +74,7 @@
                                                                         runtimeInputs = [ coreutils ( failure "99987644" ) ] ;
                                                                         text =
                                                                             let
-                                                                                init = instance.init { resources = resources ; self = self ; } ;
+                                                                                init = instance.init { resources = resources ; self = self ; stores = stores ; } ;
                                                                                 instance = implementation { inputs = inputs ; name = name ; text = text ; } ;
                                                                                 in
                                                                                     ''
